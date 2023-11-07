@@ -1,0 +1,10 @@
+const a = 1297;
+let min = 0;
+let tsag = 0;
+let sek = 0;
+tsag = parseInt(a / 3600);
+min = parseInt((a - tsag) / 60);
+sek = a - min * 60;
+console.log(tsag, "tsag");
+console.log(min, "min");
+console.log(sek, "sek");

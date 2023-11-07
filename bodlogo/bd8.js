@@ -1,4 +1,4 @@
-const a = 5.3;
+const a = 3;
 const b = 3;
-c = a + b;
-console.log(parseInt(c));
+c = Math.sqrt(a ** 2 + b ** 2);
+console.log(c);
