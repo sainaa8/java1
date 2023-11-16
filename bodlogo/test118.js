@@ -18,12 +18,12 @@
 // }
 
 //8iin bakterial
-// let a = 8;
-// let fact = 1;
-// for (let i = 1; i <= 8; i++) {
-//   fact = fact * i;
-// }
-// console.log(fact);
+let a = 8;
+let fact = 1;
+for (let i = 1; i <= 8; i++) {
+  fact = fact * i;
+}
+console.log(fact);
 
 //5**9
 // const too1 = 5;
@@ -584,7 +584,7 @@
 //   }
 // };
 // Sumt(ass);
-
+// 20
 // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // const ann = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // let SumT = (n) => {
@@ -652,12 +652,68 @@
 // }
 
 ////////////////////////////////////////////////////////////////////// ////////////////////////    PUNCTION
-const asd = "hello/ ikrudjfhello";
-console.log(asd.replace("hello", "olleh"));
+// const asd = "hello/ ikrudjfhello";
+// console.log(asd.replace("hello", "olleh"));
+///replace solidog
 
+////trim hoyr taliin hooson zaig ustgadag
+//// "concat " niiluuldeg "+"
+//// 'toUpperCase'  buh usgiig tom bolgone
+////   'toString' arreyees gargaj neg string bolgono
+////  'join'  bugdiin nemne niilulne
+////  "includes"
+// const a = ["mga", "dpl"];
+// for (let el of a);
+// console.log(a.includes("mga"));
 
- ////trim hoyr taliin hooson zaig ustgadag
- //// "concat " niiluuldeg "+"
- //// toUpperCase  buh usgiig tom bolgone 
- /////   
- 
+//// "pop" suuliin elementiig hasna
+//// push ardaaasn nemdeg
+//// shift urdaas n hasdag
+//// unshift urdaa nemdeg
+//// splice hasdg
+// slice  hasdag
+//
+
+// 1. [1,2,3,4,5,6,7,8,9,10] → buh elmentiig 2 oor urjuulen 2iig nemeed hariug butsaa, (use map)
+// let an = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// for (let el of an) {
+//   el = el * 2;
+//   el = el + 2;
+//   console.log(el);
+// }
+
+// 2. [1,2,3,4,5] → ehnii 2 elmentiig arrayaas has.
+// let an = [1, 2, 3, 4, 5];
+// an.shift();
+// an.shift();
+// console.log(an);
+//
+// 3. [1,2,3,4,5] → suuliin 3dahi elmentiig arrayaas has.
+// let a = [1, 2, 3, 4, 5];
+// a.splice(-3, 1);
+// console.log(a);
+
+// 4. [“N”, “e”, “s”, “t”, “a”, “c”, “a”, “d”, “e”, “m”, “y”] → array to “nestacademy”
+// let a = ["N", "e", "s", "t", "a", "c", "a", "d", "e", "m", "y"];
+// console.log(a.join(""));
+// 5. [1,2,3] → 4 geh elmentiig nemen [1,2,3,4] bolgo
+// let a = [1, 2, 3];
+// a.push(4);
+
+// console.log(a);
+
+// 6. [2,1,4,5,8,6] → array usuh erembe bolgo
+// let a = [2, 1, 4, 5, 8, 6];
+// a.sort();
+// console.log(a);
+
+// 7. [1,2,3,4] → array reverse hii [4,3,2,1] bolno.
+// let a = [1, 2, 5, 4];
+// a.sort();
+// a.reverse();
+// console.log(a);
+
+// 8. facebook.com/my/photos → split the word by / [facebook.com, my, photos]
+// let a = "facebook.com/my/photos";
+
+// console.log(a.split("/"));
