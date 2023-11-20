@@ -23,12 +23,10 @@
 // slice  hasdag
 //
 
-
-
-
 ///////////////////               /////////////                 /////////////            /////////////           ///////////         /////////////////                 /////////////             ///////////
 ////////////////    OBJECT METHODS
 //object.entries === objectiin key value tus buriig neg arrray dotor hiigeed butsaadag
 // objest hasOwn(object2,"javkhaa"object dotorh keyuudiig haidga
-//object assign 
+//object assign
 //entries assign hasOwn keys values
+

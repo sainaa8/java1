@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.result {
+  width: 100px;
+  height: 50px;
+  border-radius: 3px solid red;
+}
+#summ {
+  background-color: red;
+}
+#deed {
+  background-color: red;
+}
