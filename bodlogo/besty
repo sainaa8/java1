@@ -1,0 +1,17 @@
+//9. Array доторх анхны тоонуудыг хэвлэ. Element garaas avna.[1, 2, 3, 4, 0, 149, 214, 11]
+
+const arr = [1, 2, 3, 4, 0, 149, 214, 11, 9];
+
+const primeNumbers = arr.filter(function (number) {
+  if (number < 2) {
+    return false;
+  }
+  for (let i = 2; i * i <= number; i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+});
+
+console.log(primeNumbers);

@@ -1,9 +1,10 @@
-const asd = "hello/ ikrudjfhello";
-console.log(asd.replace("hello", "olleh"));
+//array method
+
+// const asd = "hellokrudjfhello";
+// console.log(asd.replace("hello", "aa"));
 ///replace solidog
 
 ////trim hoyr taliin hooson zaig ustgadag
-
 
 //// "concat " niiluuldeg "+"
 //// 'toUpperCase'  buh usgiig tom bolgone
@@ -21,3 +22,13 @@ console.log(asd.replace("hello", "olleh"));
 //// splice hasdg a.splice(-3,1)
 // slice  hasdag
 //
+
+
+
+
+///////////////////               /////////////                 /////////////            /////////////           ///////////         /////////////////                 /////////////             ///////////
+////////////////    OBJECT METHODS
+//object.entries === objectiin key value tus buriig neg arrray dotor hiigeed butsaadag
+// objest hasOwn(object2,"javkhaa"object dotorh keyuudiig haidga
+//object assign 
+//entries assign hasOwn keys values

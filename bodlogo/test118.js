@@ -18,29 +18,38 @@
 // }
 
 //8iin bakterial
-let a = 8;
-let fact = 1;
-for (let i = 1; i <= 8; i++) {
-  fact = fact * i;
-}
-console.log(fact);
+// let ass = 8;
+// let Sumt = (a) => {
+//   let fact = 1;
+//   for (let i = 1; i <= a; i++) {
+//     fact = fact * i;
+//   }
+//   console.log(fact);
+// };
+// Sumt(ass);
 
 //5**9
-// const too1 = 5;
-// let too = 5;
-// for (let a = 1; a <= 9; a++) {
-//   too = too * too1;
-//   console.log(too);
-// }
+// const a = 5,
+//   b = 2;
+// let sumt = (x, y) => {
+//   let an = 0;
+//   an = x ** y;
+//   console.log(an);
+// };
+// sumt(a, b);
 
 //30 hurtelh sondgoi tooni niilber
-// let counter = 0;
-// for (let i = 1; i <= 30; i++) {
-//   if (i % 2 !== 0) {
-//     counter = counter + i;
+// const ass = 5;
+// let Sumt = (an) => {
+//   let counter = 0;
+//   for (let i = 1; i <= an; i++) {
+//     if (i % 2 !== 0) {
+//       counter = counter + i;
+//     }
 //   }
 //   console.log(counter);
-// }
+// };
+// Sumt(ass);
 
 //100 hurtel tegsh toonii niilber
 // let counter = 0;
@@ -545,12 +554,16 @@ console.log(fact);
 // }
 
 //10. Өгөгдсөн N тоо хүртэлх бүх тэгш тоог хэвлэ. N = 290
-// const n = 290;
-// for (let i = 0; i <= 290; i++) {
-//   if (i % 2 == 0) {
-//     console.log(i);
+// const as = 290;
+// let Sumt = (n) => {
+//   for (let i = 0; i <= n; i++) {
+//     if (i % 2 == 0) {
+//       console.log(i);
+//     }
 //   }
-// }
+// };
+// Sumt(as);
+
 //11. Өгөгдсөн N тоо палиндром тоо эсэхийг шалгаад мөн бол true, биш бол false буцаа. 1990991
 // const an = "12697621",
 //   ass = "1221";
@@ -565,7 +578,7 @@ console.log(fact);
 //     console.log(false);
 //   }
 // };
-// Sumt(ass);
+// Sumt(an);
 
 //12. Өгөгдсөн N тоо анхны тоо мөн эсэхийг шалгаад мөн бол true, биш бол false буцаа. 1990991
 // let an = 18;
@@ -583,7 +596,7 @@ console.log(fact);
 //     console.log("anhnii too mon");
 //   }
 // };
-// Sumt(ass);
+// Sumt(an);
 // 20
 // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // const ann = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -657,9 +670,26 @@ console.log(fact);
 ///replace solidog
 
 ////trim hoyr taliin hooson zaig ustgadag
+// let a = " iuksjhd      ";
+// let b = a.trim();
+// console.log(b);
+
 //// "concat " niiluuldeg "+"
-//// 'toUpperCase'  buh usgiig tom bolgone
+// let a = "hello";
+// let b = "world";
+// let c = a.concat(b);
+// console.log(c);
+
+//// 'toUpperCase'  buh usgiig tom bolgone  "toLowerCase" bugdii jijig bolgon
+// let a = "kjdhIKLUJHNpeuhv";
+// let b = a.toLowerCase();
+// console.log(b);
+
 ////   'toString' arreyees gargaj neg string bolgono
+// let a = ["aiosukjdhvn"];
+// let b = a.toString();
+// console.log(b);
+
 ////  'join'  bugdiin nemne niilulne
 ////  "includes"
 // const a = ["mga", "dpl"];
@@ -675,45 +705,241 @@ console.log(fact);
 //
 
 // 1. [1,2,3,4,5,6,7,8,9,10] → buh elmentiig 2 oor urjuulen 2iig nemeed hariug butsaa, (use map)
-// let an = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// for (let el of an) {
-//   el = el * 2;
-//   el = el + 2;
-//   console.log(el);
-// }
+// let ass = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let sumt = (an) => {
+//   for (let el of an) {
+//     el = el * 2;
+//     el = el + 2;
+//     console.log(el);
+//   }
+// };
+// sumt(ass)
 
 // 2. [1,2,3,4,5] → ehnii 2 elmentiig arrayaas has.
-// let an = [1, 2, 3, 4, 5];
-// an.shift();
-// an.shift();
-// console.log(an);
-//
+// let ass = [1, 2, 3, 4, 5];
+// let Sumt = (an) => {
+//   an.shift();
+//   an.shift();
+//   console.log(an);
+// };
+// Sumt(ass);
+
 // 3. [1,2,3,4,5] → suuliin 3dahi elmentiig arrayaas has.
-// let a = [1, 2, 3, 4, 5];
-// a.splice(-3, 1);
-// console.log(a);
+// let ass = [1, 2, 3, 4, 5, 7, 9];
+// let Sumt = (a) => {
+//   a.splice(-3, 1);
+// };
+//   console.log(a);
+// Sumt(ass);
 
 // 4. [“N”, “e”, “s”, “t”, “a”, “c”, “a”, “d”, “e”, “m”, “y”] → array to “nestacademy”
-// let a = ["N", "e", "s", "t", "a", "c", "a", "d", "e", "m", "y"];
-// console.log(a.join(""));
+// let as = ["N", "e", "s", "t", "a", "c", "a", "d", "e", "m", "y"];
+// let Sumt = (a) => {
+//   console.log(a.join("").toLowerCase());
+// };
+// Sumt(as);
 // 5. [1,2,3] → 4 geh elmentiig nemen [1,2,3,4] bolgo
-// let a = [1, 2, 3];
-// a.push(4);
-
-// console.log(a);
+// let as = [1, 2, 3];
+// let Sumt = (a) => {
+//   a.push(4);
+//   console.log(a);
+// };
+// Sumt(as);
 
 // 6. [2,1,4,5,8,6] → array usuh erembe bolgo
-// let a = [2, 1, 4, 5, 8, 6];
-// a.sort();
-// console.log(a);
+// let as = [2, 1, 4, 5, 8, 6];
+// let Sumt = (a) => {
+//   a.sort();
+//   console.log(a);
+// };
+// Sumt(as);
 
 // 7. [1,2,3,4] → array reverse hii [4,3,2,1] bolno.
-// let a = [1, 2, 5, 4];
-// a.sort();
-// a.reverse();
-// console.log(a);
+// let as = [1, 2, 5, 4];
+// let Sumt = (a) => {
+//   a.sort();
+//   a.reverse();
+//   console.log(a);
+// };
+// Sumt(as);
 
 // 8. facebook.com/my/photos → split the word by / [facebook.com, my, photos]
-// let a = "facebook.com/my/photos";
+// let as = "facebook.com/my/photos";
+// let Sumt = (a) => {
+//   console.log(a.split("/"));
+// };
+// Sumt(as)
 
-// console.log(a.split("/"));
+//const users = [
+//  { name: 'Victor', score: 20 },
+//  { name: 'Mario', score: 10 },
+//  { name: 'Tatiana', score: 30 }] → array of object iig score ooroor erembel ereblehde for(let i of users) ashiglana.
+// const users = [
+//   { name: "Victor", score: 20 },
+//   { name: "Mario", score: 10 },
+//   { name: "Tatiana", score: 30 },
+// ];
+// let nw = [];
+// for (let el of users) {
+// }
+
+// 2. [1, 3, 5, 22, 89, 46, 17, 31, 59] array in hamgiin ih too bolon hamgiin baga toog ol.
+// const a = [1, 3, 5, 22, 89, 46, 17, 31, 59];
+// // b = Math.max(1, 3, 5, 22, 89, 46, 17, 31, 59);
+// // c = Math.min(1, 3, 5, 22, 89, 46, 17, 31, 59);
+// // console.log(b);
+// // console.log(c);
+// let max = 0;
+// min = 0;
+// for (let i = 0; i < a.length; i++) {
+//   if (a[i] > max) {
+//     max = a[i];
+//   }
+//   if (a[i] < a[i + 1]) {
+//     min = a[i];
+//   }
+// }
+// console.log(max);
+// console.log(min);
+
+// 3. 0 - 50 hurtelh toonuudin fibanocci daraalal olon arrayd hiin arrayiig hevle.
+// 4. [1,2,3,4,5] arrayiin goliin elementiig hamgiin suuliin elementeer soli, hervee goliin element gej baohgui bol suuliin elementiig 2 oor urjuulen soli.
+
+////////////////  ///////////////////////////////////////////////////////////////////////////////////////////////////////                CALLBACK
+
+// array.filter zowhon unn garsan hariug buttsaans
+// foreach.
+
+//1. Өгөгдсөн n массивийн нийлбэрийг олж буцаа. (n = [1,5,7,9,2])
+// const n = [1, 5, 7, 9, 2];
+// let sum = 0;
+// n.forEach((element) => {
+//   sum = sum + element;
+//   console.log(sum);
+// });
+// const secondwayn = n.map((item) => (sum = sum + item));
+// console.log(sum);
+
+//2. Өгөгдсөн n массивийн дунджийг олж буцаа. (n = [1,5,7,9,2])
+// const n = [1, 5, 7, 9, 2];
+// let sum = 0;
+
+// n.forEach((element) => {
+//   sum = sum + element;
+//   ave = sum / n.length;
+// });
+// console.log(ave);
+// const array = [1, 2, 3, 4, 5];
+// const evenArray = [];
+// array.forEach((element) => {
+//   if (element % 2 == 0) {
+//     evenArray.push(element);
+//   }
+// });
+// console.log(evenArray);
+// const multipiedByTwoArray = array.map((element) => element * 2);
+// console.log(multipiedByTwoArray);
+// const evArray = array.filter((item) => item % 2 === 0);
+// console.log(evArray);
+//3. A болон B тоо өгөгдөв. А тооны B зэргийг давталт ашиглан олж буцаа.
+// const a = 3,
+//   b = 3;
+// let urjver = a;
+
+// // const zereg = n.map((item) => item ** b);
+// // console.log(zereg);
+// for (let i = 1; i < b; i++) {
+//   urjver = urjver * a;
+//   console.log(urjver);
+// }
+
+//4. Өгөгдсөн массивийн хамгийн их тоог олж буцаа. (n = [1,5,7,9,2])
+// const n = [1, 5, 7, 9, 12, 2];
+// let max = 0;
+// n.forEach((element) => {
+//   if (element > max) {
+//     max = element;
+//   }
+// });
+// console.log(max);
+//5. Өгөгдсөн массивийн elementuudiig 2t huvaan butsaa. (n = [1,5,7,9,2])
+// const n = [1, 5, 7, 9, 2];
+// const newn = n.map((item) => item / 2);
+// console.log(newn);
+
+//6. Хүмүүсийн төрсөн онууд өгөгдсөн бол насуудыг бодож гарга. int birthYear = [1994, 1997, 2003, 1993, 2001]
+// const int = [1994, 1997, 2003, 1993, 2001, 2002];
+// const newint = int.map((item) => 2023 - item);
+// console.log(newint);
+
+//7. Array -н бүх утгыг 2 дахин ихэсгэ. int a = [1, 2, 3, 4]
+// const a = [1, 2, 3, 4];
+// const nwa = a.map((item) => item * 2);
+// console.log(nwa);
+
+//8. Array-н тэгш элемэнтүүдийн тоог ол. element garaas avna. [1, 2, 3, 4]
+// let a = [1, 2, 3, 4, 5];
+// let evenNumber = 0;
+// a.forEach((element) => {
+//   if (element % 2 == 0) {
+//     evenNumber = evenNumber + 1;
+//   }
+// });
+// console.log(evenNumber);
+
+// //9. Array доторх анхны тоонуудыг хэвлэ. Element garaas avna.[1, 2, 3, 4, 0, 149, 214, 11]
+
+// const arr = [1, 2, 3, 4, 0, 149, 214, 11, 9];
+// // const arr2 = [];
+// // const primeNum = arr.filter((e) => {
+// //   console.log(e);
+// //   for (let i = 2; i < e; i++) {
+// //     if (e % i == 0) {
+
+// //     }
+// //   }
+// // });
+
+// const primeNumbers = arr.filter(function (number) {
+//   if (number < 2) {
+//     return false;
+//   }
+//   for (let i = 2; i * i <= number; i++) {
+//     if (number % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// });
+
+// console.log(primeNumbers);
+
+//10. N ширхэг тоо агуулах массивын тэгш дугаартай тоог 2-т хувааж, сондгой дугаартай тоог 7-д хувааж тухайн элемэнтийн ноогдворыг  тухайн элемэнтийн байрлалд тавь. Хэрвээ N нь сондгой бол N тооны сүүлийн цифрийг нь 2-т хувааж ногдворыг нь тавина.
+// const arr = [1, 2, 3, 4, 5, 8, 6];
+// let alength = arr.length;
+
+// const us = arr.map(function (number) {
+//   if (number % 2 == 0) {
+//     return (number = number / 2);
+//   } else {
+//     return (number = number / 7);
+//   }
+// });
+// if (alength % 2 !== 0) {
+// }
+// if (alength % 2 !== 0) {
+//   alength = (alength % 10) / 2;
+//   console.log(alength);
+//   ass.splice(-1, 0);
+//   ass.push(alength);
+// }
+
+// console.log(us);
+
+///////////////////               /////////////                 /////////////            /////////////           ///////////         /////////////////                 /////////////             ///////////
+////////////////    OBJECT METHODS
+//object.entries === objectiin key value tus buriig neg arrray dotor hiigeed butsaadag
+// objest hasOwn(object2,"javkhaa"object dotorh keyuudiig haidga
+//object assign 
+//entries assign hasOwn keys values
+
