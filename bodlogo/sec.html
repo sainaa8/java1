@@ -6,23 +6,62 @@
     <title>Document</title>
     <link rel="stylesheet" href="./sec.css" />
   </head>
-  <body>
-    <div class="bigOne">
+  <body style="display: flex; align-items: center">
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 300px;
+      "
+      class="bigOne"
+    >
       <div class="deed">
-        <input id="num1" type="number" />
-        <span>*</span>
-        <input id="num2" type="number" />
+        <div
+          style="
+            width: 295px;
+            height: 30px;
+            border: 1.2px solid black;
+            border-radius: 2px;
+          "
+          id="result"
+        ></div>
+        <div id="newText">
+          <input id="num1" type="number" />
+          <!-- <div id="num1"></div> -->
+          <input id="num2" type="number" />
+          <div id="sign"></div>
+          <!-- <div id="num2"></div> -->
+        </div>
 
-        <span>=</span>
-        <span id="result">output </span>
-      </div>
+        <div id="temdegtuud">
+          <div id="dund">
+            <button id="summ">+</button>
+            <button id="difference">-</button>
+            <button id="urjih">*</button>
+            <button id="huwaah">/</button>
+            <button id="modul">%</button>
+          </div>
 
-      <div class="dood">
-        <button id="equal">*</button>
-        <button id="summ">+</button>
+          <button style="height: 40px" onclick="uildel()">=</button>
+        </div>
+
+        <div id="numbers">
+          <div class="number" id="one">1</div>
+          <div class="number" id="two">2</div>
+          <div class="number" id="three">3</div>
+          <div class="number" id="four">4</div>
+          <div class="number" id="five">5</div>
+          <div class="number" id="six">6</div>
+          <div class="number" id="seven">7</div>
+          <div class="number" id="eight">8</div>
+          <div class="number" id="nine">9</div>
+          <div class="number" id="zero">0</div>
+          <div class="number" id="dot">&#128405;.</div>
+          <div class="number" id="c">C</div>
+        </div>
       </div>
     </div>
-    <div class="result"></div>
   </body>
   <script src="./second.js"></script>
 </html>

@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.big {
+  width: 500px;
+  height: 800px;
+  background-color: black;
+  border-radius: 20px;
+}
+.deed {
+  width: 470px;
+  height: 130px;
+  color: white;
+  font-size: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  background-color: black;
+  border: none;
+}
+.ddeed {
+  width: 470px;
+  height: 130px;
+  color: rgb(179, 175, 175);
+  font-size: 80px;
+  background-color: black;
+  border: none;
+}
+/* .qq {
+  border: 2px solid red;
+}
+.a {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 300px;
+  height: 100px;
+} */
+.dood {
+  width: 500px;
+  height: 530px;
+
+  position: relative;
+}
+.grey {
+  width: 350px;
+  height: 100px;
+
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.greys {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: grey;
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+.greys:hover {
+  background-color: rgb(79, 77, 77);
+}
+.black {
+  width: 350px;
+  height: 390px;
+
+  position: absolute;
+  top: 110px;
+  left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.bls {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: rgb(60, 59, 59);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+.bls:hover {
+  background-color: grey;
+}
+.aa {
+  width: 200px;
+  border-radius: 40px;
+}
+.yellow {
+  width: 100px;
+  height: 500px;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.yels {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+}
+.yels:hover {
+  background-color: rgb(248, 185, 69);
+}
+#result {
+  width: 300px;
+  height: 300px;
+  background-color: antiquewhite;
+}

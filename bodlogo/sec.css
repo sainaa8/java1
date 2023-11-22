@@ -3,14 +3,74 @@ body {
   align-items: center;
   justify-content: center;
 }
-.result {
-  width: 100px;
-  height: 50px;
-  border-radius: 3px solid red;
+.bigOne {
+  border: 4px solid green;
+  background-color: bisque;
 }
-#summ {
-  background-color: red;
+#result {
+  background-color: aliceblue;
 }
-#deed {
-  background-color: red;
+
+#newText {
+  width: 295px;
+  height: 68px;
+  background-color: aliceblue;
+  border: 1.2px solid black;
+  position: relative;
+}
+#num1 {
+  border: 2px solid red;
+  position: absolute;
+  width: 250px;
+  height: 28px;
+  right: 0;
+  top: 0;
+}
+#sign {
+  border: 2px solid red;
+  position: absolute;
+  width: 40px;
+  left: 0;
+  height: 68px;
+}
+#num2 {
+  border: 2px solid red;
+  position: absolute;
+  width: 250px;
+  height: 28px;
+  right: 0;
+  bottom: 0;
+}
+#temdegtuud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  width: 45px;
+  height: 30px;
+  font-size: 20px;
+}
+button:focus {
+  background-color: #acadaa;
+}
+#numbers {
+  width: 295px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.number {
+  width: 63px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #eff0ee;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.number:active {
+  background-color: #acadaa;
 }
