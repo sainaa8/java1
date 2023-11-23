@@ -25,14 +25,16 @@ body {
 
   background-color: black;
   border: none;
+  margin-left: 20px;
 }
 .ddeed {
   width: 470px;
   height: 130px;
   color: rgb(179, 175, 175);
-  font-size: 80px;
+  font-size: 50px;
   background-color: black;
   border: none;
+  margin-left: 20px;
 }
 /* .qq {
   border: 2px solid red;

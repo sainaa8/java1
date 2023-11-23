@@ -20,6 +20,7 @@ const hasah = document.getElementById("hasah");
 const nemeh = document.getElementById("nemeh");
 const tentsuu = document.getElementById("tentsuu");
 const result = document.getElementById("result");
+const uild = document.getElementById("uildel");
 one.addEventListener("click", () => {
   deed.value += "1";
 });
@@ -62,52 +63,58 @@ dot.addEventListener("click", () => {
 let num1 = "";
 
 let num2 = "";
-let operator;
-let kep;
+// let operator;
+// let kep;
 
 //
-// nemeh.addEventListener("click", () => {
-//   operator = "nemeh";
-//   let num2 = deed.value;
-//   ddeed.value = num2;
-//   deed.value = num1;
+nemeh.addEventListener("click", () => {
+  //   operator = "nemeh";
+  // deed.value += "+";
+  let num2 = deed.value;
+  ddeed.value = num2;
+  deed.value = "";
+});
+urjih.addEventListener("click", () => {
+  let num2 = deed.value;
+  ddeed.value = num2;
+  deed.value = num1;
+});
 
-//   hasah.addEventListener("click", (event) => {
-//     operator = "hasah";
-//   });
-//   urjih.addEventListener("click", (event) => {
-//     operator = "urjih";
-//   });
-//   huwaah.addEventListener("click", (event) => {
-//     operator = "huwaah";
-//   });
-//   modul.addEventListener("click", (event) => {
-//     operator = "moduld";
-//   });
+function Nmh(number1, number2) {
+  let rec = number1 + number2;
+  return rec;
+}
 
-//   deed.addEventListener("change", (event) => {
-//     num1 = parseFloat(event.target.value);
-//   });
+//
 
-//   ddeed.addEventListener("change", (event) => {
-//     num2 = parseFloat(event.target.value);
-//   });
+deed.addEventListener("change", (event) => {
+  num1 = parseFloat(event.target.value);
+});
 
-//   //   a = "3"
-//   //   b = "6"
+ddeed.addEventListener("change", (event) => {
+  num2 = parseFloat(event.target.value);
+});
+uild.addEventListener("click", () => {
+  num1 = deed.value;
+  let result1 = Nmh(num1, num2);
+  result.innerHTML = result1;
+});
 
-//   //   sum = parseFloat(a) + parseFloat(b);
+/////////                                        ////////////////////////
+//   a = "3"
+//   b = "6"
 
-//   //   let ng = num1_input.value;
-//   //   num2_input.value = ng;
-//   //   num1_input.value = "";
-// });
+//   sum = parseFloat(a) + parseFloat(b);
 
-// const uildel = () => {
+//   let ng = num1_input.value;
+//   num2_input.value = ng;
+//   num1_input.value = "";
+
+//////////////////////////////////////////                       /////////
+// uild.addEventListener("click", () => {
 //   switch (operator) {
 //     case "nemeh":
 //       kep = num1 + num2;
-
 //       break;
 //     case "hasah":
 //       kep = num1 - num2;
@@ -126,4 +133,4 @@ let kep;
 //   deed.value = "";
 //   ddeed.value = "";
 //   result.innerHTML = kep;
-// };
+// });
