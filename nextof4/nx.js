@@ -28,6 +28,9 @@ function funcreset() {
 function myFun() {
   alert("game over, red win");
 }
+reset.addEventListener("click", () => {
+  funcreset();
+});
 blue.addEventListener("click", () => {
   counter2--;
   left.innerHTML = counter2;
@@ -54,6 +57,41 @@ red.addEventListener("click", () => {
     funcreset();
   }
 });
-reset.addEventListener("click", () => {
-  funcreset();
-});
+
+document.addEventListener("keypress", logKey);
+
+function logKey(e) {
+  if (e.code === "KeyA") {
+    // red_sqr.addEvexxntListener("click", () => {
+    counter2++;
+    left.innerHTML = counter2;
+    counter--;
+    right.innerHTML = counter;
+    red.style = `width:${(rpasd += 10)}px`;
+    blue.style = `width:${(pasd = pasd - 10)}px`;
+    if (counter2 == 101) {
+      myFun();
+      funcreset();
+    }
+    // });
+  } else if (e.code === "KeyL") {
+    // blue_sqr.addEventListener("click", () => {.
+
+    //
+    counter2--;
+    left.innerHTML = counter2;
+    counter++;
+    right.innerHTML = counter;
+    blue.style = `width:${(pasd += 10)}px`;
+    red.style = `width:${(rpasd = rpasd - 10)}px`;
+
+    console.log(pasd);
+    if (counter === 101) {
+      myFunction();
+      funcreset();
+    }
+  } else if (e.code === "KeyR") {
+    funcreset();
+  }
+  console.log(e.code);
+}
