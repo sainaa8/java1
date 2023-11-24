@@ -16,7 +16,7 @@ let index = 0;
 
 function changer(aa) {
   image.src = img[aa];
-  console.log(img[aa]);
+  
 }
 
 prev.addEventListener("click", () => {

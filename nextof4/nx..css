@@ -1,0 +1,42 @@
+.big {
+  width: 1000px;
+  height: 700px;
+  border: 2px solid green;
+}
+#deed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#left {
+  width: 200px;
+  height: 200px;
+  border: 2px solid green;
+  font-size: 200px;
+}
+#right {
+  width: 200px;
+  height: 200px;
+  border: 2px solid green;
+  font-size: 200px;
+}
+#reset {
+  width: 120px;
+  height: 30px;
+}
+.dood {
+  display: flex;
+  width: 1000px;
+}
+
+#red {
+  /* width: 50%; */
+
+  height: 600px;
+  background-color: red;
+}
+#blue {
+  /* width: 50%; */
+  height: 600px;
+  background-color: blue;
+}
