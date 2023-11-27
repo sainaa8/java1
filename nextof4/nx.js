@@ -39,7 +39,7 @@ blue.addEventListener("click", () => {
   blue.style = `width:${(pasd += 10)}px`;
   red.style = `width:${(rpasd = rpasd - 10)}px`;
 
-  console.log(pasd);
+  // console.log(pasd);
   if (counter === 101) {
     myFunction();
     funcreset();
@@ -85,7 +85,7 @@ function logKey(e) {
     blue.style = `width:${(pasd += 10)}px`;
     red.style = `width:${(rpasd = rpasd - 10)}px`;
 
-    console.log(pasd);
+    // console.log(pasd);
     if (counter === 101) {
       myFunction();
       funcreset();
@@ -93,5 +93,5 @@ function logKey(e) {
   } else if (e.code === "KeyR") {
     funcreset();
   }
-  console.log(e.code);
+  // console.log(e.code);
 }

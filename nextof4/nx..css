@@ -1,7 +1,6 @@
 .big {
   width: 1000px;
   height: 700px;
-  border: 2px solid green;
 }
 #deed {
   display: flex;
@@ -9,15 +8,15 @@
   align-items: center;
 }
 #left {
-  width: 200px;
+  width: 400px;
   height: 200px;
-  border: 2px solid green;
+
   font-size: 200px;
 }
 #right {
-  width: 200px;
+  width: 400px;
   height: 200px;
-  border: 2px solid green;
+
   font-size: 200px;
 }
 #reset {

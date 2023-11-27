@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.container1 {
+  width: 1000px;
+  height: 800px;
+
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0px;
+}
+.container {
+}
+.tur {
+  display: flex;
+}
+.turns {
+  font-size: 100px;
+  color: rgb(0, 38, 255);
+}
+#turns {
+  font-size: 100px;
+  color: rgb(0, 38, 255);
+}
+
+/* .draimon {
+  width: 1000px;
+  height: 300px;
+} */
+.img {
+  width: 300px;
+  height: 300px;
+}
+.div {
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgb(0, 38, 255);
+}

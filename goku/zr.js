@@ -16,7 +16,6 @@ let index = 0;
 
 function changer(aa) {
   image.src = img[aa];
-  
 }
 
 prev.addEventListener("click", () => {
@@ -36,3 +35,5 @@ next.addEventListener("click", () => {
   }
   changer(index);
 });
+
+/// appendChild  ///  draggable ///  appendchild
