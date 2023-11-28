@@ -2,9 +2,9 @@ const draggableImages = document.querySelectorAll("img");
 const droppableBox = document.querySelectorAll(".container1 div");
 const turn = document.getElementById("turns");
 const div1 = document.getElementById("divImg1");
-const div2 = document.getElementById("divImg2");
-const div3 = document.getElementById("divImg3");
-const div4 = document.getElementById("divImg4");
+// const div2 = document.getElementById("divImg2");
+// const div3 = document.getElementById("divImg3");
+// const div4 = document.getElementById("divImg4");
 const Img1 = document.getElementById("Img1");
 let temp;
 let count = 0;
@@ -27,6 +27,15 @@ droppableBox.forEach((el) => {
     turn.innerHTML = count;
   });
 });
-// if (div1.) {
+if ((containsChild = div1.contains(Img1)));
+{
+  // console.log(containsChild);
+  alert("u win");
+}
+// if ((containsChild = true)) {
 //   alert("u win");
+// }
+// let stubAss = div1.includes("Img1");
+// if ((stubAss = true)) {
+//   console.log(stubAss);
 // }

@@ -36,4 +36,4 @@ next.addEventListener("click", () => {
   changer(index);
 });
 
-/// appendChild  ///  draggable ///  appendchild
+/// appendChild  ///  draggable ///  
