@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+}
+.div {
+  width: 200px;
+  height: 40px;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+img {
+  width: 150px;
+  height: 240px;
+}
