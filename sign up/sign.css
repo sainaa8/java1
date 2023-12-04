@@ -1,0 +1,107 @@
+.container {
+  background-color: rgb(203, 227, 248);
+  width: 1000px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  gap: 20px;
+}
+.sign {
+  font-size: 100px;
+  font-family: roboto;
+}
+.it {
+  font-size: 40px;
+
+  font-family: roboto;
+}
+.names {
+  width: 940px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+#one {
+  width: 430px;
+  height: 70px;
+  font-size: 40px;
+  padding-left: 20px;
+  color: grey;
+  border-radius: 5px;
+  border: 0.3px solid black;
+}
+#two {
+  width: 430px;
+  height: 70px;
+  font-size: 40px;
+  padding-left: 20px;
+  color: grey;
+  border-radius: 5px;
+  border: 0.3px solid black;
+}
+#number {
+  width: 915px;
+  height: 70px;
+  color: grey;
+  font-size: 40px;
+  padding-left: 20px;
+  border-radius: 5px;
+  border: 0.3px solid black;
+}
+#pass {
+  width: 915px;
+  height: 70px;
+  margin-top: 20px;
+  color: grey;
+  font-size: 40px;
+  padding-left: 20px;
+  border-radius: 5px;
+  border: 0.3px solid black;
+}
+
+.birth {
+  font-size: 37px;
+  margin-top: 30px;
+  font-family: roboto;
+}
+#month {
+  width: 140px;
+  height: 70px;
+}
+#day {
+  width: 140px;
+  height: 70px;
+}
+#year {
+  width: 140px;
+  height: 70px;
+}
+.gender {
+  width: 370px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-family: roboto;
+}
+.ng {
+  font-size: 37px;
+  margin-left: 20px;
+}
+.hr {
+  font-size: 37px;
+}
+button {
+  width: 430px;
+  height: 75px;
+  font-size: 36px;
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 8px;
+}
+select {
+  font-size: 30px;
+  padding-left: 20px;
+}

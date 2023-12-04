@@ -39,35 +39,10 @@ addTask.addEventListener("click", (newTask) => {
     status: status2.value,
     Priority: Priority.value,
   };
-  states.push(newTask); 
+  states.push(newTask);
   console.log(states);
   big.style.display = "none";
 
   myObject();
 });
-// title.addEventListener("change", (event) => {
-//   myObject.title = event.target.value;
-// });
 
-// description.addEventListener("change", (event) => {
-//   myObject.description = event.target.value;
-// });
-
-// addTask.addEventListener("click", () => {
-//   var temp = status2.value;
-//   myObject.status = temp;
-
-//   var pri = Priority.value;
-
-//   myObject.Priority = pri;
-//   big.style.display = "none";
-//   states.push(myObject);
-//   console.log(states);
-//   myObject.title = "";
-//   myObject.description = "";
-//   status2.value = "";
-//   Priority.value = "";
-// });
-////function///////////////////////////////////////////
-
-//
