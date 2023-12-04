@@ -76,6 +76,7 @@ body {
   border: 1px solid black;
   border-radius: 4px;
 }
+
 .secondAddTask {
   width: 367px;
   height: 35px;
@@ -103,7 +104,8 @@ body {
 }
 .done {
   width: 350px;
-  height: 100px;
+  /* height: 100px; */
+  height: fit-content;
   background-color: #e8ecf2;
   border-radius: 10px;
 }
@@ -154,3 +156,75 @@ body {
   justify-content: center;
 }
 /* functon */
+/*               middle */
+#middle {
+  width: 330px;
+  height: 120px;
+  margin-left: 10px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  display: flex;
+}
+#currect {
+  width: 50px;
+  height: 100px;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+}
+#in {
+  border: 0.6px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#rightOfMiddle {
+  width: 300px;
+  height: 110px;
+  border: 1px solid green;
+  display: flex;
+}
+#midOfMid {
+  width: 230px;
+  height: 110px;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: roboto;
+}
+#leftOfMid {
+  width: fit-content;
+  height: 27px;
+  border-radius: 7px;
+}
+#ex {
+  border: 0.6px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.atLast {
+  width: 50px;
+  height: 80px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#note {
+  border: 0.6px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
