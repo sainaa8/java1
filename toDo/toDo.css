@@ -159,16 +159,20 @@ body {
 /*               middle */
 #middle {
   width: 330px;
-  height: 120px;
+  height: fit-content;
   margin-left: 10px;
   background-color: #ffffff;
   border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+#ass {
   display: flex;
 }
 #currect {
   width: 50px;
   height: 100px;
-  border: 2px solid red;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 }
@@ -181,25 +185,33 @@ body {
   justify-content: center;
   align-items: center;
 }
+.ass {
+  background-color: black;
+  color: white;
+}
 #rightOfMiddle {
   width: 300px;
   height: 110px;
-  border: 1px solid green;
+
   display: flex;
 }
 #midOfMid {
   width: 230px;
   height: 110px;
-  border: 1px solid green;
+
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   font-family: roboto;
 }
 #leftOfMid {
-  width: fit-content;
+  width: 50px;
   height: 27px;
   border-radius: 7px;
+  border: 0.8px solid black;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
 }
 #ex {
   border: 0.6px solid black;
@@ -209,11 +221,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
 }
 .atLast {
   width: 50px;
   height: 80px;
-  border: 1px solid red;
+
   display: flex;
   flex-direction: column;
   align-items: center;
