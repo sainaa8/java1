@@ -157,7 +157,7 @@ body {
 }
 /* functon */
 /*               middle */
-#middle {
+.them {
   width: 330px;
   height: fit-content;
   margin-left: 10px;

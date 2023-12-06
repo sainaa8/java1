@@ -1,5 +1,6 @@
 const image = document.querySelectorAll("img");
 const allBox = document.querySelectorAll(".container div");
+
 console.log(allBox);
 let temp;
 image.forEach((el) => {
