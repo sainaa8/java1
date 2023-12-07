@@ -15,7 +15,6 @@ const inpMiddle = document.getElementById("inp-middle");
 const stuckMiddle = document.getElementById("stuck-middle");
 const doneMiddle = document.getElementById("done-middle");
 
-// display: block
 addCard.forEach((el) => {
   el.onclick = function () {
     big.style.display = "block";
@@ -27,37 +26,57 @@ window.onclick = function (event) {
     big.style.display = "none";
   }
 };
-//
 
-const states = [];
+let states = [];
+const firstGet = JSON.parse(localStorage.getItem("keyToDo"));
+states = firstGet ? firstGet : [];
+
+let newTask = {
+  title: "",
+  description: "",
+  status: "To-do",
+  Priority: "high",
+};
+
+const setData = (obj) => {
+  states.push({ ...obj });
+  let temp = JSON.stringify(states);
+  localStorage.setItem("keyToDo", temp);
+
+  render();
+};
+
 let myObject = () => {
   (title.value = ""),
     (description.value = ""),
     (status2.value = "To-do"),
     (Priority.value = "low");
+
+  newTask = {
+    title: "",
+    description: "",
+    status: "To-do",
+    Priority: "high",
+  };
 };
 
-addTask.addEventListener("click", (newTask) => {
+addTask.addEventListener("click", () => {
   newTask = {
     title: title.value,
     description: description.value,
     status: status2.value,
     Priority: Priority.value,
   };
-  states.push(newTask);
 
-  let temp = JSON.stringify(states);
-  localStorage.setItem("keyToDo", temp);
-
-  big.style.display = "none";
-  render();
+  setData(newTask);
   myObject();
+  big.style.display = "none";
 });
 
 const card = (prop) => {
   const { title, description, status, Priority } = prop;
 
-  return `<div id="ass">
+  return `<div class="ass1" id="ass" draggable="true">
                <div id="currect">
                   <div id="in" >${
                     status == "Done" ? "&#xf058;" : "&#10003"
@@ -75,28 +94,26 @@ const card = (prop) => {
                      <div id="note">&#x2660;</div>
                    </div>
                </div>
-            
-    
             </div>
             
     `;
 };
+
 const render = () => {
-  // local get
   const response = JSON.parse(localStorage.getItem("keyToDo"));
-  // console.log(response);
-  // response -> for foreach map -> el -> cacrd(el) -> result
-  // middiv.innerhtl += result
+  todoMiddle.innerHTML = "";
+  inpMiddle.innerHTML = "";
+  stuckMiddle.innerHTML = "";
+  doneMiddle.innerHTML = "";
+
+  console.log(response);
+
   response.forEach((el) => {
     const result = card(el);
-
-    // let ass = result;
-    // containerr.innerHTML = containerr.innerHTML + ass;
     switch (el.status) {
       case "To-do":
         todoMiddle.innerHTML += result;
         break;
-
       case "In-progress":
         inpMiddle.innerHTML += result;
         break;
@@ -109,25 +126,44 @@ const render = () => {
     }
   });
 };
+render();
 
 let temp;
-const allBox = document.getElementsByClassName("them");
-console.log(allBox);
-const alldrag = document.querySelectorAll(".them div");
-alldrag.forEach((el) => {
+const drags = document.querySelectorAll(".ass1");
+console.log(drags);
+const layout = document.querySelectorAll(".done");
+drags.forEach((el) => {
   el.addEventListener("dragstart", (event) => {
-    event.dataTransfer.setdata("drag", event.target.id);
+    event.dataTransfer.setData("todo", event.target.value);
   });
 });
-
-allBox.forEach((el) => {
+layout.forEach((el) => {
   el.addEventListener("dragover", (event) => {
     event.preventDefault();
   });
-  el.addEventListener("drop", (event) => {
-    temp = event.dataTransfer.getData("drag");
-    const drr = document.getElementById(temp);
-    el.appendchild(drr);
-  });
 });
-render();
+const todoCard = document.getElementById("todoCard");
+const progcard = document.getElementById("progcard");
+const stuckcard = document.getElementById("stuccard");
+const donecard = document.getElementById("donecard");
+
+todoCard.addEventListener("drop", (event) => {
+  temp = event.dataTransfer.getData("todo");
+  const draggedEl = document.getElementById(temp);
+  todoMiddle.appendChild(draggedEl);
+});
+progcard.addEventListener("drop", (event) => {
+  temp = event.dataTransfer.getData("todo");
+  const draggedprog = document.getElementById(temp);
+  inpMiddle.appendChild(draggedprog);
+});
+stuckcard.addEventListener("drop", (event) => {
+  temp = event.dataTransfer.getData("todo");
+  const draggedstck = document.getElementById(temp);
+  stuckMiddle.appendChild(draggedstck);
+});
+donecard.addEventListener("drop", (event) => {
+  temp = event.dataTransfer.getData("todo");
+  const draggeddone = document.getElementById(temp);
+  doneMiddle.appendChild(draggeddone);
+});

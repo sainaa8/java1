@@ -168,6 +168,10 @@ body {
 }
 #ass {
   display: flex;
+  border: 0.5px solid black;
+  width: 330px;
+  height: fit-content;
+  border-radius: 7px;
 }
 #currect {
   width: 50px;
@@ -176,6 +180,7 @@ body {
   display: flex;
   justify-content: center;
 }
+
 #in {
   border: 0.6px solid black;
   width: 30px;
@@ -240,4 +245,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* time */
+#clock {
+  width: 300px;
+  height: 50px;
+  border: 2px dashed black;
+  position: absolute;
+  z-index: 2;
+  left: 970px;
+  top: 30px;
+  color: rgb(7, 7, 7);
+  font-size: 40px;
+  font-family: roboto;
+  display: flex;
+  justify-content: center;
 }
