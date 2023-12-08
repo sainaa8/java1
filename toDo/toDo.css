@@ -166,7 +166,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-#ass {
+.ass1 {
   display: flex;
   border: 0.5px solid black;
   width: 330px;
@@ -248,16 +248,38 @@ body {
 }
 /* time */
 #clock {
-  width: 300px;
+  width: 180px;
   height: 50px;
   border: 2px dashed black;
-  position: absolute;
-  z-index: 2;
-  left: 970px;
-  top: 30px;
+  border-radius: 6px;
+  align-items: center;
+
   color: rgb(7, 7, 7);
-  font-size: 40px;
+  font-size: 30px;
   font-family: roboto;
   display: flex;
   justify-content: center;
+}
+#cloc {
+  width: 300px;
+  height: 300px;
+  border: 10px dashed black;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.double {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: 20px double black;
 }
