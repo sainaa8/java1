@@ -134,13 +134,6 @@ let myObject = () => {
     (description.value = ""),
     (status2.value = "To-do"),
     (Priority.value = "low");
-
-  newTask = {
-    title: "",
-    description: "",
-    status: "To-do",
-    Priority: "high",
-  };
 };
 
 addTask.addEventListener("click", () => {
@@ -216,6 +209,9 @@ let check = document.getElementById("in");
 drags.forEach((el) => {
   el.addEventListener("dragstart", (event) => {
     event.dataTransfer.setData("todo", event.target.id);
+
+    // event.dataTransfer.setData("box", event.target.id);
+    // console.log(box);
   });
 });
 
@@ -229,16 +225,6 @@ const progcard = document.getElementById("progcard");
 const stuckcard = document.getElementById("stuccard");
 const donecard = document.getElementById("donecard");
 let temp;
-
-// drags.forEach(() => {
-//   check.addEventListener("click", (event) => {
-//     console.log("asdadssssssss");
-//     temp = event.dataTransfer.getData("todo");
-
-//     doneMiddle.appendChild(temp);
-//   });
-// });
-
 todoCard.addEventListener("drop", (event) => {
   event.preventDefault();
   temp = event.dataTransfer.getData("todo");
@@ -267,28 +253,28 @@ donecard.addEventListener("drop", (event) => {
   const draggeddone = document.getElementById(temp);
   doneMiddle.appendChild(draggeddone);
 });
+let drags1 = document.getElementsByClassName("ass1")[0];
+console.log(drags1);
+function chec(event) {
+  event.forEach((el) => {
+    el.dataTransfer.setData("todos", el.target.id);
+  });
+}
 
-// const box = document.querySelectorAll(".done");
-
-// const findCount = () => {
-//   layout.forEach((el) => {
-//     const tasks = el.querySelectorAll(".them");
-//     const taskCount = el.querySelectorAll(".coun");
-//     console.log(taskCount);
-//     taskCount.innerHTML = tasks.length;
-//   });
-// };
-
-// findCount();
-// render();
+check.addEventListener("click", (event) => {
+  chec(drags1);
+  temp = event.dataTransfer.getData("todos");
+  const draggedstck = document.getElementById(temp);
+  stuckMiddle.appendChild(draggedstck);
+});
 const box = document.querySelectorAll(".done");
-console.log(box);
+
 const findCount = () => {
   box.forEach((el) => {
     const tasks = el.querySelectorAll(".ass1");
-    console.log(tasks);
+
     const taskCount = el.getElementsByClassName("coun")[0];
-    console.log(taskCount);
+
     taskCount.innerHTML = tasks.length;
   });
 };
