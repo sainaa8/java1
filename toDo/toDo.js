@@ -152,11 +152,11 @@ addTask.addEventListener("click", () => {
 const card = (prop) => {
   const { title, description, status, id, Priority } = prop;
 
-  return `<div class="ass1" id="ass${id}" draggable="true">
+  return `<div class="as1" id="${id}" draggable="true">
                <div id="currect">
-                  <div id="in" >${
-                    status == "Done" ? "&#xf058;" : "&#10003"
-                  }</div>
+                  <div id=${id} class="done-status" >${
+    status == "Done" ? "&#9733;" : "&#10003"
+  }</div>
                </div>
                <div id="rightOfMiddle">
                   <div id="midOfMid"> 
@@ -166,7 +166,7 @@ const card = (prop) => {
    
                   </div>
                   <div class="atLast">
-                     <div id="ex">&#215;</div>
+                     <div id="ex" onclick = "deleteBtn('${id}')"  >&#215;</div>
                      <div id="note">&#x2660;</div>
                    </div>
                </div>
@@ -199,19 +199,35 @@ const render = () => {
         break;
     }
   });
+  const check = document.querySelectorAll(".done-status");
+  check.forEach((el) => {
+    el.addEventListener("click", (event) => {
+      let parentId = el.parentElement.parentElement.id;
+
+      const responseDn = JSON.parse(localStorage.getItem("keyToDo"));
+      console.log(responseDn);
+      const neueArr = responseDn.map((el) => {
+        if (el.id === parentId) {
+          return { ...el, status: "Done" };
+        }
+        return el;
+      });
+      localStorage.setItem("keyToDo", JSON.stringify(neueArr));
+
+      render.call(this);
+      location.reload();
+    });
+  });
 };
 render();
 
-let drags = document.querySelectorAll(".ass1");
+let drags = document.querySelectorAll(".as1");
 let layout = document.querySelectorAll(".done");
-let check = document.getElementById("in");
 
 drags.forEach((el) => {
   el.addEventListener("dragstart", (event) => {
     event.dataTransfer.setData("todo", event.target.id);
-
-    // event.dataTransfer.setData("box", event.target.id);
-    // console.log(box);
+    console.log(event.target.id);
   });
 });
 
@@ -224,54 +240,81 @@ const todoCard = document.getElementById("todoCard");
 const progcard = document.getElementById("progcard");
 const stuckcard = document.getElementById("stuccard");
 const donecard = document.getElementById("donecard");
+
 let temp;
 todoCard.addEventListener("drop", (event) => {
-  event.preventDefault();
   temp = event.dataTransfer.getData("todo");
-  const draggedEl = document.getElementById(temp);
-  todoMiddle.appendChild(draggedEl);
+
+  const responseFromLS = JSON.parse(localStorage.getItem("keyToDo"));
+  const newArr = responseFromLS.map((el) => {
+    if (el.id === temp) {
+      return { ...el, status: "To-do" };
+    }
+    return el;
+  });
+  localStorage.setItem("keyToDo", JSON.stringify(newArr));
+
+  render();
+  findCount();
+  location.reload();
 });
 
 progcard.addEventListener("drop", (event) => {
-  event.preventDefault();
   temp = event.dataTransfer.getData("todo");
-  const draggedprog = document.getElementById(temp);
 
-  inpMiddle.appendChild(draggedprog);
+  const responseFromLS = JSON.parse(localStorage.getItem("keyToDo"));
+  const newArr = responseFromLS.map((el) => {
+    if (el.id === temp) {
+      return { ...el, status: "In-progress" };
+    }
+    return el;
+  });
+  localStorage.setItem("keyToDo", JSON.stringify(newArr));
+
+  render();
+  findCount();
+  location.reload();
 });
 
 stuckcard.addEventListener("drop", (event) => {
-  event.preventDefault();
   temp = event.dataTransfer.getData("todo");
-  const draggedstck = document.getElementById(temp);
-  stuckMiddle.appendChild(draggedstck);
+
+  const responseFromLS = JSON.parse(localStorage.getItem("keyToDo"));
+  const newArr = responseFromLS.map((el) => {
+    if (el.id === temp) {
+      return { ...el, status: "Stuck" };
+    }
+    return el;
+  });
+  localStorage.setItem("keyToDo", JSON.stringify(newArr));
+
+  render();
+  findCount();
+  location.reload();
 });
 
 donecard.addEventListener("drop", (event) => {
-  event.preventDefault();
   temp = event.dataTransfer.getData("todo");
-  const draggeddone = document.getElementById(temp);
-  doneMiddle.appendChild(draggeddone);
-});
-let drags1 = document.getElementsByClassName("ass1")[0];
-console.log(drags1);
-function chec(event) {
-  event.forEach((el) => {
-    el.dataTransfer.setData("todos", el.target.id);
-  });
-}
 
-check.addEventListener("click", (event) => {
-  chec(drags1);
-  temp = event.dataTransfer.getData("todos");
-  const draggedstck = document.getElementById(temp);
-  stuckMiddle.appendChild(draggedstck);
+  const responseFromLS = JSON.parse(localStorage.getItem("keyToDo"));
+  const newArr = responseFromLS.map((el) => {
+    if (el.id === temp) {
+      return { ...el, status: "Done" };
+    }
+    return el;
+  });
+  localStorage.setItem("keyToDo", JSON.stringify(newArr));
+
+  render();
+  findCount();
+  location.reload();
 });
+
 const box = document.querySelectorAll(".done");
 
 const findCount = () => {
   box.forEach((el) => {
-    const tasks = el.querySelectorAll(".ass1");
+    const tasks = el.querySelectorAll(".as1");
 
     const taskCount = el.getElementsByClassName("coun")[0];
 
@@ -279,3 +322,14 @@ const findCount = () => {
   });
 };
 findCount();
+
+function deleteBtn(id) {
+  console.log("deleteworl");
+  const newArr = states.filter((item) => {
+    return item.id !== id;
+  });
+  states = localStorage.setItem("keyToDo", JSON.stringify(newArr))
+    ? localStorage.setItem("keyToDo", JSON.stringify(newArr))
+    : [];
+  location.reload();
+}
