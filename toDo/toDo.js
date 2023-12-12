@@ -99,6 +99,7 @@ addCard.forEach((el) => {
 window.onclick = function (event) {
   if (event.target == big) {
     big.style.display = "none";
+    location.reload();
   }
 };
 
@@ -126,7 +127,7 @@ const setData = (obj) => {
 
   location.reload();
 
-  render();
+  // render();
 };
 
 let myObject = () => {
@@ -136,17 +137,23 @@ let myObject = () => {
     (Priority.value = "low");
 };
 
-addTask.addEventListener("click", () => {
-  newTask = {
-    title: title.value,
-    description: description.value,
-    status: status2.value,
-    Priority: Priority.value,
-  };
+let editActive = false;
 
-  setData(newTask);
-  myObject();
-  big.style.display = "none";
+addTask.addEventListener("click", () => {
+  if (editActive) {
+    edittedTask();
+  } else {
+    newTask = {
+      title: title.value,
+      description: description.value,
+      status: status2.value,
+      Priority: Priority.value,
+    };
+
+    setData(newTask);
+    myObject();
+    big.style.display = "none";
+  }
 });
 
 const card = (prop) => {
@@ -155,7 +162,7 @@ const card = (prop) => {
   return `<div class="as1" id="${id}" draggable="true">
                <div id="currect">
                   <div id=${id} class="done-status" >${
-    status == "Done" ? "&#9733;" : "&#10003"
+    status == "Done" ? `<div class="aa">&#10003</div>` : "&#10003"
   }</div>
                </div>
                <div id="rightOfMiddle">
@@ -167,7 +174,7 @@ const card = (prop) => {
                   </div>
                   <div class="atLast">
                      <div id="ex" onclick = "deleteBtn('${id}')"  >&#215;</div>
-                     <div id="note">&#x2660;</div>
+                     <div class="note" id="edit-${id}">&#x2660;</div>
                    </div>
                </div>
             </div>
@@ -331,5 +338,43 @@ function deleteBtn(id) {
   states = localStorage.setItem("keyToDo", JSON.stringify(newArr))
     ? localStorage.setItem("keyToDo", JSON.stringify(newArr))
     : [];
+  location.reload();
+}
+const edit = document.querySelectorAll(".note");
+
+const addtask = document.getElementById("addtask");
+const addTskBtn = document.getElementById("addTsk");
+
+let edittedTaskID = "";
+
+edit.forEach((element) => {
+  element.addEventListener("click", (event) => {
+    big.style.display = "block";
+    editActive = true;
+    const data = JSON.parse(localStorage.getItem("keyToDo"));
+    const ID = event.target.id.split("-")[1];
+    edittedTaskID = ID;
+    const task = data.find(({ id }) => id == ID);
+    title.value = task.title;
+    description.value = task.description;
+    status2.value = task.status2;
+    Priority.value = task.Priority;
+  });
+});
+
+function edittedTask() {
+  const data = JSON.parse(localStorage.getItem("keyToDo"));
+  const task = data.find(({ id }) => id == edittedTaskID);
+  const filter = data.filter(({ id }) => id != edittedTaskID);
+
+  task.title = title.value;
+  task.description = description.value;
+  task.status = status2.value;
+  task.Priority = Priority.value;
+  editActive = false;
+
+  localStorage.setItem("keyToDo", JSON.stringify([...filter, task]));
+  big.style.display = "none";
+  render();
   location.reload();
 }
