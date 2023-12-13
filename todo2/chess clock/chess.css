@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.stopwatch {
+  text-align: center;
+}
+
+.display {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.control {
+  font-size: 1em;
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.start {
+  background-color: #4caf50;
+  color: white;
+}
+.stop {
+  background-color: #ff4f4f;
+  color: white;
+}
+.reset {
+  background-color: #3498db;
+  color: white;
+}
+.as1 {
+  width: 100px;
+}
+
+.as2 {
+  display: flex;
+  justify-content: flex-end;
+}

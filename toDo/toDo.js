@@ -105,14 +105,15 @@ window.onclick = function (event) {
 
 let states = [];
 const firstGet = JSON.parse(localStorage.getItem("keyToDo"));
+
 states = firstGet ? firstGet : [];
 
-let newTask = {
-  title: "",
-  description: "",
-  status: "To-do",
-  Priority: "high",
-};
+// let newTask = {
+//   title: "",
+//   description: "",
+//   status: "To-do",
+//   Priority: "high",
+// };
 
 const uniqId = () => {
   const uniq = "id" + new Date().getTime();
@@ -127,7 +128,7 @@ const setData = (obj) => {
 
   location.reload();
 
-  // render();
+  render();
 };
 
 let myObject = () => {
@@ -174,7 +175,7 @@ const card = (prop) => {
                   </div>
                   <div class="atLast">
                      <div id="ex" onclick = "deleteBtn('${id}')"  >&#215;</div>
-                     <div class="note" id="edit-${id}">&#x2660;</div>
+                     <div class="note" id="edit-${id}">&#9998;</div>
                    </div>
                </div>
             </div>
@@ -193,7 +194,6 @@ const render = () => {
     switch (el.status) {
       case "To-do":
         todoMiddle.innerHTML += result;
-
         break;
       case "In-progress":
         inpMiddle.innerHTML += result;
@@ -331,7 +331,6 @@ const findCount = () => {
 findCount();
 
 function deleteBtn(id) {
-  console.log("deleteworl");
   const newArr = states.filter((item) => {
     return item.id !== id;
   });
@@ -349,10 +348,13 @@ let edittedTaskID = "";
 
 edit.forEach((element) => {
   element.addEventListener("click", (event) => {
+    addtask.innerHTML = "Edit task";
+    addTskBtn.innerHTML = "save";
     big.style.display = "block";
     editActive = true;
     const data = JSON.parse(localStorage.getItem("keyToDo"));
     const ID = event.target.id.split("-")[1];
+    console.log(ID);
     edittedTaskID = ID;
     const task = data.find(({ id }) => id == ID);
     title.value = task.title;
@@ -378,3 +380,4 @@ function edittedTask() {
   render();
   location.reload();
 }
+//L9S79Z3QB

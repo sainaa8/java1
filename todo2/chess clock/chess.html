@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chess</title>
+    <link rel="stylesheet" href="./chess.css" />
+  </head>
+  <body>
+    <div class="stopwatch">
+      <div class="as1">
+        <div id="display" class="display">00:00:00</div>
+      </div>
+
+      <button id="start" class="control start">Player1</button>
+      <button id="stop" class="control stop" onclick="stop(),stop1()">
+        Stop
+      </button>
+      <button id="reset" class="control reset">Reset</button>
+      <button id="start1" class="control stop">Player2</button>
+      <div class="as2">
+        <div id="display1" class="display">00:00:00</div>
+      </div>
+    </div>
+  </body>
+  <script src="./chess.js"></script>
+</html>

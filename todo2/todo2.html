@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to Do2</title>
+    <link rel="stylesheet" href="./todo2.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="cloc">
+      <div class="double">
+        <div id="neg" class="star">&#9733;</div>
+        <div id="hoyr" class="star">&#9733;</div>
+        <div id="guraw" class="star">&#9733;</div>
+        <p id="clock"></p>
+      </div>
+    </div>
+    <div class="bigOpac" id="bigOpac">
+      <div class="whenClickAdd">
+        <div class="innerClick">
+          <div id="addtask" class="addTask">Add task</div>
+          <div style="font-family: roboto" class="title">
+            <div class="tt">Title</div>
+            <textarea name="" id="bottonOFtitle" cols="30" rows="10"></textarea>
+          </div>
+          <div class="description">
+            <div style="font-family: roboto" class="tt">Description</div>
+            <textarea
+              name=""
+              id="bottonOFdescription"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="Status">
+            <div style="font-family: roboto" class="tt">Status</div>
+            <select name="" id="bottonOFStatus">
+              <option value="To-do" selected>To-Do</option>
+              <option value="In-progress">In-progress</option>
+              <option value="Stuck">Stuck</option>
+              <option value="Done">Done</option>
+            </select>
+          </div>
+          <div class="Priority">
+            <div style="font-family: roboto" class="tt">Priority</div>
+            <select name="" id="bottonOFPriority">
+              <option value="low">low</option>
+              <option value="mid">mid</option>
+              <option value="high">high</option>
+            </select>
+          </div>
+          <div id="addTsk" class="secondAddTask">add task</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- outside                        -->
+
+    <div class="border">
+      <!-- to do -->
+      <div id="todoCard" class="done">
+        <div class="topOfDone">
+          <div class="dn">To-do</div>
+          <div class="coun">0</div>
+        </div>
+
+        <div class="them" id="todo-middle"></div>
+        <div class="surefc">
+          <div class="bottomOfDone">
+            <div class="sum">+</div>
+            <div id="add">Add card</div>
+          </div>
+        </div>
+      </div>
+      <!-- in progress -->
+      <div id="progcard" class="done">
+        <div class="topOfDone">
+          <div style="width: 190px" class="dn">In-progress</div>
+          <div class="coun">0</div>
+        </div>
+
+        <div class="them" id="inp-middle"></div>
+
+        <div class="surefc">
+          <div class="bottomOfDone">
+            <div class="sum">+</div>
+            <div id="add">Add card</div>
+          </div>
+        </div>
+      </div>
+      <!-- Stuck -->
+      <div id="stuccard" class="done">
+        <div class="topOfDone">
+          <div style="width: 110px" class="dn">Stuck</div>
+          <div class="coun">0</div>
+        </div>
+
+        <div class="them" id="stuck-middle"></div>
+
+        <div class="surefc">
+          <div class="bottomOfDone">
+            <div class="sum">+</div>
+            <div id="add">Add card</div>
+          </div>
+        </div>
+      </div>
+      <!-- done -->
+      <div id="donecard" class="done">
+        <div class="topOfDone">
+          <div class="dn">Done</div>
+          <div class="coun">0</div>
+        </div>
+
+        <div class="them" id="done-middle"></div>
+
+        <div class="surefc">
+          <div class="bottomOfDone">
+            <div class="sum">+</div>
+            <div id="add">Add card</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./todo2.js"></script>
+</html>
