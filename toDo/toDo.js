@@ -322,7 +322,7 @@ const box = document.querySelectorAll(".done");
 const findCount = () => {
   box.forEach((el) => {
     const tasks = el.querySelectorAll(".as1");
-
+    console.log(tasks);
     const taskCount = el.getElementsByClassName("coun")[0];
 
     taskCount.innerHTML = tasks.length;
@@ -380,4 +380,3 @@ function edittedTask() {
   render();
   location.reload();
 }
-//L9S79Z3QB
