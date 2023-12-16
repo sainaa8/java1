@@ -1,4 +1,4 @@
-const startBtn1 = document.getElementById("start");
+@const startBtn1 = document.getElementById("start");
 const startBtn2 = document.getElementById("start1");
 const display1 = document.getElementById("display");
 const display2 = document.getElementById("display1");
